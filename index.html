@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <script defer src="face-api.min.js"></script>
+  <script defer src="script.js"></script>
+  <link rel="stylesheet" type="text/css" href="colorGame.css">
+  <style>
+    canvas {
+      position: absolute;
+    }
+    .invisible{
+     opacity: 0;
+     z-index: 0;
+     /*display: none;*/
+
+    }
+    .visible{
+      transition: all 2s;
+      opacity: 1;
+      /*display: block;*/      
+    }
+    .invisiblepage{
+      display: none;
+    }
+    .visiblepage{
+      display: block;
+    }
+    h2{
+      color: white;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <video id="video" width="1" height="1" autoplay muted></video>
+  <div class="visiblepage head">
+    <h1>HEY,FRIEND YOU LOOK</h1>
+    <h2></h2>
+    <h1>SMILE TO VIEW THE WEBSITE</h1>
+  </div>
+  <div class="content invisible">
+    <h1>The Great
+<br>
+  <span id="colorDisplay">RGB</span> 
+<br>
+Color Game</h1>
+<div id="stripe">
+  <button id="resetButton">New Colors</button>
+  <span id="messagedisplay"></span>
+  <button id="easy">Easy</button>
+  <button id="hard" class="selected">Hard</button>
+</div>
+<div id="container">
+  <div class="square"></div>
+    <div class="square"></div>
+    <div class="square"></div>
+    <div class="square"></div>
+    <div class="square"></div>    
+    <div class="square"></div>
+</div>
+  </div>
+
+
+<script type="text/javascript" src="ColorGameFinal.js"></script>
+
+</body>
+</html>
