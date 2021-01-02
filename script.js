@@ -57,7 +57,7 @@ video.addEventListener('play', () => {
       li[1].innerHTML="ANGRY <i class='fas fa-check'></i>";
       imgcolor.style.background="linear-gradient(to right, #0a0a0b 0%, #6a0b0b 100%)";
     }
-    else if(detections[0].expressions.surprised>0.8){
+    else if(detections[0].expressions.surprised>0.9){
       messDis.innerHTML="Surprised <i class='far fa-surprise'></i>";
       li[2].innerHTML="SURPRISED <i class='fas fa-check'></i>";
       imgcolor.style.background=" linear-gradient(to right, #222022 0%, #0f0d68 100%)";
