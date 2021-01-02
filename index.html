@@ -26,15 +26,13 @@
 
   <!-- PATATAP -->
   <!-- css -->
-<link rel="stylesheet" type="text/css" href="patatap/ptclone.css">
+<!-- <link rel="stylesheet" type="text/css" href="patatap/ptclone.css"> -->
 <!-- howler js -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/howler/2.2.1/howler.js" integrity="sha512-J+vDCDlH9TYo4uL0R5g9TCvJj8oGATXWi17AcOyUhuyEbJf0SF5HSmKv1gwPCEowauPanV0RAaYjyU+kbowtQg==" crossorigin="anonymous"></script>
 <!-- paper.js -->
 <script type="text/javascript" src="patatap/paper-full.js"></script>
 <!-- paper js script starts -->
 <script type="text/paperscript"  canvas="myCanvas">
-
-
 var keyData = {
   q: {
     sound: new Howl({
@@ -225,7 +223,34 @@ function onFrame(event) {
     }
 }
 </script>
+<style type="text/css">
+  #myCanvas {
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  margin: 0;
+}
 
+body, html {
+ height: 100%;
+ margin: 0;
+
+}
+#pt{
+  text-align: center;
+  font-family: myFirstFont;
+  letter-spacing: 3px;
+  background-color: black;
+  color: white;
+  margin-bottom: 0;
+}
+@font-face {
+  font-family: myFirstFont;
+  src: url("android_7.ttf");
+}
+
+
+</style>
  
 </head>
 <body>
