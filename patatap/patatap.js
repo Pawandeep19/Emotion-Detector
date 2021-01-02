@@ -1,4 +1,4 @@
-<!-- assigning colors and sound to each key -->
+// <!-- assigning colors and sound to each key -->
 
 var keyData = {
 	q: {
@@ -159,7 +159,7 @@ var keyData = {
 	}
 }
 
-<!-- on key press -->
+// <!-- on key press -->
 
 var circle=[];
 function onKeyDown(event){
@@ -176,7 +176,7 @@ function onKeyDown(event){
 }
 
 
-<!-- for Animation -->
+// <!-- for Animation -->
 
 function onFrame(event) {
 	for(var i=0;i<circle.length;i++){

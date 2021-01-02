@@ -224,9 +224,9 @@ function onFrame(event) {
 }
 </script>
 <style type="text/css">
-  canvas {
+  #myCanvas {
   width: 100%;
-  height: 100%;
+  height: 700px;
   background-color: black;
 }
 
@@ -254,7 +254,8 @@ body, html {
  
 </head>
 <body>
-<section class="container visible mainpage">
+<section class="container invisible mainpage">
+    <video id="video" width="1" height="1" autoplay muted></video>
       <div class="rectangle">
         <h3>EMOTION DETECTOR</h3>
       </div>
@@ -280,18 +281,14 @@ body, html {
             </div>
         </div>
 </section>
-<video id="video" width="1" height="1" autoplay muted></video>
 
 
 
 
 
-<div class="content invisible">
+<div class="content visible">
   <h2 id="pt">PRESS KEYS (A-Z)</h2>
   <canvas id="myCanvas" resize></canvas>
 </div>
-
-
-
 </body>
 </html>
