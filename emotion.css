@@ -1,0 +1,48 @@
+canvas {
+position: absolute;
+}
+.invisible{
+display: none;
+
+}
+.visible{
+display: block;      
+}
+#exp{
+mix-blend-mode: lighten;
+margin: auto 0;
+}
+body{
+background-color: white;
+font-family: 'Montserrat', sans-serif;
+}
+.imgbox{
+background: linear-gradient(to right, #434343, #000000);
+box-shadow: 5px 10px 8px 10px #888888;
+}
+.rectangle{
+width: 100%;
+height: 60px;
+background-color: yellow;
+margin: 30px 0;
+font-family: 'Montserrat', sans-serif;
+letter-spacing: 2px;
+font-weight: bold;
+text-align: center;
+}
+#made{
+margin-top: 220px;
+}
+#stack{
+display: inline-block;
+}
+h1{
+color: white;
+line-height: 1.1;
+text-align: center;
+text-transform: uppercase;
+background :steelblue;
+margin: 0;
+font-weight: normal;
+padding: 20px 0;
+}

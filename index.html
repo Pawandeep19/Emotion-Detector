@@ -4,68 +4,77 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Document</title>
-  <script defer src="face-api.min.js"></script>
-  <script defer src="script.js"></script>
-  <link rel="stylesheet" type="text/css" href="colorGame.css">
-  <style>
-    canvas {
-      position: absolute;
-    }
-    .invisible{
-     opacity: 0;
-     z-index: 0;
-     /*display: none;*/
+  <title>EMOTION DETECTOR</title>
+  <!-- EMOTION DETECTOR -->
 
-    }
-    .visible{
-      transition: all 2s;
-      opacity: 1;
-      /*display: block;*/      
-    }
-    .invisiblepage{
-      display: none;
-    }
-    .visiblepage{
-      display: block;
-    }
-    h2{
-      color: white;
-      text-align: center;
-    }
-  </style>
+
+  <!-- face api -->
+  <script defer src="face-api.min.js"></script>
+  <!-- emotion detector javascript -->
+  <script defer src="script.js"></script>
+  <!-- icon pack -->
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+  <!-- bootstrap css -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <!-- font -->
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300&family=Roboto:wght@100;300&display=swap" rel="stylesheet">
+   <!-- css -->
+  <link rel="stylesheet" type="text/css" href="emotion.css">
+
+
+
+  <!-- PATATAP -->
+  <!-- css -->
+<link rel="stylesheet" type="text/css" href="patatap/ptclone.css">
+<!-- howler js -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/howler/2.2.1/howler.js" integrity="sha512-J+vDCDlH9TYo4uL0R5g9TCvJj8oGATXWi17AcOyUhuyEbJf0SF5HSmKv1gwPCEowauPanV0RAaYjyU+kbowtQg==" crossorigin="anonymous"></script>
+<!-- paper.js -->
+<script type="text/javascript" src="patatap/paper-full.js"></script>
+<!-- paper js script starts -->
+<script type="text/paperscript" src="patatap/patatap.js" canvas="myCanvas"></script>
+
+ 
 </head>
 <body>
-  <video id="video" width="1" height="1" autoplay muted></video>
-  <div class="visiblepage head">
-    <h1>HEY,FRIEND YOU LOOK</h1>
-    <h2></h2>
-    <h1>SMILE TO VIEW THE WEBSITE</h1>
-  </div>
-  <div class="content invisible">
-    <h1>The Great
-<br>
-  <span id="colorDisplay">RGB</span> 
-<br>
-Color Game</h1>
-<div id="stripe">
-  <button id="resetButton">New Colors</button>
-  <span id="messagedisplay"></span>
-  <button id="easy">Easy</button>
-  <button id="hard" class="selected">Hard</button>
-</div>
-<div id="container">
-  <div class="square"></div>
-    <div class="square"></div>
-    <div class="square"></div>
-    <div class="square"></div>
-    <div class="square"></div>    
-    <div class="square"></div>
-</div>
-  </div>
+<section class="container visible mainpage">
+      <div class="rectangle">
+        <h3>EMOTION DETECTOR</h3>
+      </div>
+      <div class="row">
+            <div class="col-md-6 order-2 order-md-1 d-flex justify-content-center imgbox">
+                <img src="images/46.jpg" alt="" class="img-fluid" id="exp" height="400" width="500" >
+            </div>
+            <div class="col-md-6 text-center order-1 order-md-2">     
+              <h2> YOU LOOK</h2>          
+                <h1 class="messDis">DETECTING MOOD...</h1>
+                <div id="stack">
+                  <ul>
+                    <li>BORING</li>
+                    <li>ANGRY</li>
+                    <li>SURPRISED</li>
+                    <li>SAD</li>
+                  </ul>
+                </div>
+                <p class="lead">SMILE<i class="fas fa-laugh-beam"></i>  TO VIEW THE WEBSITE</p> 
+                <p id="made">MADE BY
+                <br>
+                PAWANDEEP SINGH</p>                  
+            </div>
+        </div>
+</section>
+<video id="video" width="1" height="1" autoplay muted></video>
 
 
-<script type="text/javascript" src="ColorGameFinal.js"></script>
+
+
+
+<div class="content invisible">
+  <h2 id="pt">PRESS KEYS (A-Z)</h2>
+  <canvas id="myCanvas" resize></canvas>
+</div>
+
+
 
 </body>
 </html>
