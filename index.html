@@ -26,13 +26,15 @@
 
   <!-- PATATAP -->
   <!-- css -->
-<!-- <link rel="stylesheet" type="text/css" href="patatap/ptclone.css"> -->
+<link rel="stylesheet" type="text/css" href="patatap/ptclone.css">
 <!-- howler js -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/howler/2.2.1/howler.js" integrity="sha512-J+vDCDlH9TYo4uL0R5g9TCvJj8oGATXWi17AcOyUhuyEbJf0SF5HSmKv1gwPCEowauPanV0RAaYjyU+kbowtQg==" crossorigin="anonymous"></script>
 <!-- paper.js -->
 <script type="text/javascript" src="patatap/paper-full.js"></script>
 <!-- paper js script starts -->
 <script type="text/paperscript"  canvas="myCanvas">
+<!-- assigning colors and sound to each key -->
+
 var keyData = {
   q: {
     sound: new Howl({
@@ -192,7 +194,7 @@ var keyData = {
   }
 }
 
-
+<!-- on key press -->
 
 var circle=[];
 function onKeyDown(event){
@@ -203,13 +205,34 @@ function onKeyDown(event){
   var myCircle = new Path.Circle(finalPoint,500);
   myCircle.fillColor = keyData[event.key].color;
     keyData[event.key].sound.play();
-  // document.querySelector("h2").style.display="none";
+  document.querySelector("h2").style.display="none";
   circle.push(myCircle);
     }
 }
 
 
+<!-- for mobiles -->
 
+var randomidx;
+var arr=['q','w','e','r','t','y','u','i','o','p','a','s','d','f','g','h','j','k','l','z','x','c','v','b','n','m'];
+
+
+document.body.addEventListener("touchstart",f);
+function f(event){
+  var maxpoint=new Point(view.size.width, view.size.height);
+  var randomPoint=Point.random();
+  var finalPoint=randomPoint*maxpoint;
+  var myCircle = new Path.Circle(finalPoint,500);
+  myCircle.fillColor = "orange";
+  randomidx=Math.floor(Math.random() * arr.length);
+  myCircle.fillColor = keyData[arr[randomidx]].color;
+    keyData[arr[randomidx]].sound.play();
+  document.querySelector("h2").style.display="none";
+  circle.push(myCircle);
+    
+}
+
+<!-- for Animation -->
 
 function onFrame(event) {
   for(var i=0;i<circle.length;i++){
@@ -223,37 +246,10 @@ function onFrame(event) {
     }
 }
 </script>
-<style type="text/css">
-  #myCanvas {
-  width: 100%;
-  height: 700px;
-  background-color: black;
-}
-
-body, html {
- height: 100%;
- margin: 0;
- overflow: hidden;
-
-}
-#pt{
-  text-align: center;
-  font-family: myFirstFont;
-  letter-spacing: 3px;
-  background-color: black;
-  color: white;
-  margin-bottom: 0;
-}
-@font-face {
-  font-family: myFirstFont;
-  src: url("android_7.ttf");
-}
-
-
-</style>
- 
 </head>
 <body>
+
+<!-- emotion detector -->
 <section class="container visible mainpage">
     <video id="video" width="1" height="1" autoplay muted></video>
       <div class="rectangle">
@@ -285,7 +281,7 @@ body, html {
 
 
 
-
+<!-- patatap  -->
 <div class="content invisible">
   <h2 id="pt">PRESS KEYS (A-Z)</h2>
   <canvas id="myCanvas" resize></canvas>
