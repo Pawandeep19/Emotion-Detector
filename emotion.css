@@ -1,45 +1,55 @@
-.invisible{
-display: none;
-
-}
-.visible{
-display: block;      
-}
-#exp{
-mix-blend-mode: lighten;
-margin: auto 0;
-}
+/*body for emotion detector*/
 body{
-background-color: white;
-font-family: 'Montserrat', sans-serif;
+	background-color: white;
+	font-family: 'Montserrat', sans-serif;
 }
+/*for making patatap invisible till detector does not detect smiles*/
+/*and after that making detector invisible*/
+.invisible{
+	display: none;
+}
+/*for making patatap visible after smile*/
+.visible{
+	display: block;      
+}
+/*making photo blend with background*/
+#photo{
+	mix-blend-mode: lighten;
+	margin: auto 0;
+}
+/*default image bg color*/
 .imgbox{
-background: linear-gradient(to right, #434343, #000000);
-box-shadow: 5px 10px 8px 10px #888888;
+	background: linear-gradient(to right, #434343, #000000);
+	box-shadow: 5px 10px 8px 10px #888888;
 }
+/*emotion detector heading box*/
 .rectangle{
-width: 100%;
-height: 60px;
-background-color: yellow;
-margin: 30px 0;
-font-family: 'Montserrat', sans-serif;
-letter-spacing: 2px;
-font-weight: bold;
-text-align: center;
+	width: 100%;
+	height: 60px;
+	background-color: yellow;
+	margin: 30px 0;
+	font-family: 'Montserrat', sans-serif;
+	letter-spacing: 2px;
+	font-weight: bold;
+	text-align: center;
 }
-#made{
-margin-top: 220px;
+/*video*/
+#video{
+	margin-top:10px;
+	margin-bottom: 20px;
 }
+/*emotion list for tickmark*/
 #stack{
-display: inline-block;
+	display: inline-block;
 }
+/*detecting mood box*/
 h1{
-color: white;
-line-height: 1.1;
-text-align: center;
-text-transform: uppercase;
-background :steelblue;
-margin: 0;
-font-weight: normal;
-padding: 20px 0;
+	color: white;
+	line-height: 1.1;
+	text-align: center;
+	text-transform: uppercase;
+	background :steelblue;
+	margin: 0;
+	font-weight: normal;
+	padding: 20px 0;
 }
